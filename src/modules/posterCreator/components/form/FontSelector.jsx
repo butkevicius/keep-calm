@@ -3,8 +3,8 @@ import data from '../../../../common/data';
 
 const FontSelector = ({ value, onSelect }) => (
     <select value={value} onChange={onSelect} style={{ fontFamily: value }} className="FontSelector">
-        {data.fonts.availableFonts.map((f, i) => <option style={{ fontFamily: 'Muli, Helvetica' }} key={i}
-                                                                  value={f}>{f}</option>)}
+        {data.fonts.availableFonts.map((f, i) => <optgroup style={{ fontFamily: f }}><option key={i}
+                                                                   value={f}>{f}</option></optgroup>)}
     </select>
 );
 
